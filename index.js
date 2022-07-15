@@ -7,3 +7,24 @@ countDown(4);
 // 1
 // "DONE!"
 */
+
+// setInterval --> bc every 1000 milliseconds decrement the value
+// setInterval --> set to variable to recieve the intervalId
+// anonymous func bc will clear timer after it's done
+// countDown is the main func
+// setInverval within countDown
+// if num === 0, clearInterval() --> console.log("DONE");
+
+function countDown(num) {
+  let timer = setInterval(() => {
+    if (num === 1) {
+      clearInterval(timer);
+      console.log('DONE!');
+    } else {
+      num--;
+      console.log(num);
+    }
+  }, 1000);
+}
+
+countDown(4);
